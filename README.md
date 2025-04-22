@@ -2,7 +2,7 @@
 
 ### Based in [indifferentbroccoli repository](https://github.com/indifferentbroccoli/projectzomboid-server-docker)
 
-- This repository only modify .env and templates for ready build and run in your docker
+- This repository only modify .env and templates for the version game 41.78, ready, build and run in your docker
 
 ## Server Requirements
 
