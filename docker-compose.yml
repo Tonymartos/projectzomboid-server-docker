@@ -1,0 +1,19 @@
+services:
+  la-plazeta-betaserver:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: pz-server-docker
+    stop_grace_period: 30s
+    ports:
+      - 16264:16264/udp
+      - 16265:16265/udp
+      - 27016:27016/tcp
+    environment:
+      GENERATE_SETTINGS: true
+    env_file:
+      - .env
+    volumes:
+      - ./server-files:/project-zomboid
+      - ./server-data:/project-zomboid-config
